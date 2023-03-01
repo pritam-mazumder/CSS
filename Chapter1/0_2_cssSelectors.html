@@ -1,0 +1,77 @@
+<!-- 
+    CSS Selectors:
+    CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+    CSS element Selector:
+    The element selector selects all elements with the specified element name.
+
+
+    CSS #id Selector:
+    The #id selector styles the element with the specified id.
+
+
+    CSS .class Selector:
+    The .class selector selects elements with a specific class attribute.
+    To select elements with a specific class, write a period (.) character, followed by the name of the class.
+
+
+    IMP:
+
+     - we can groub selectors like this:
+        h1, h2, h3, h4, h5, div{
+            color: red;  ==> h1, h2, h3, h4, h5, div all will recieve same css properties
+        }
+
+     - * can be used as a universal selector to selectall the elements
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+     - An inline style will override external and internal style
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        h1, h3{
+            color: red;
+        }
+        div{ 
+            background-color: antiquewhite;
+        }
+        #red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+            color: white;
+            border: 2px solid black;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CSS Selectors Page</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, repellendus.
+        </p>
+        <h1>Another heading</h1>
+        <div id="red">bg is red</div>
+        <span class="blue">first tag</span>
+        <span class="blue">first tag</span>
+        <span class="blue">first tag</span>
+
+        <h3>h3 heading</h3>
+    </div>
+
+</body>
+</html>
