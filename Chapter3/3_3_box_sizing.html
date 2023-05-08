@@ -37,14 +37,14 @@
     <style>
         .d1{
             box-sizing: content-box;  
-            width: 300px;
+            width: 400px;
             height: 100px;
             padding: 30px;  
             border: 10px solid green;
         }
         .d2{
             box-sizing: border-box;
-            width: 300px;
+            width: 400px;
             height: 100px;
             padding: 30px;  
             border: 10px solid green;
@@ -54,11 +54,14 @@
 </head>
 <body>
     <div class="d1">
-        This div has a width of 300px. But the full width is 300px + 20px (left and right border) + 60px (left and right padding) = 380px!
+        This div has a width of 300x100 <br>
+        Full width = 400 + (30+30) + (10+10) + (0+0) = 380px <br>
+        Full height = 100 + (30+30) + (10+10) + (0+0) = 180px
     </div>
     <br>
     <div class="d2">
-        Here, the full width is 300px, no matter what!
+        Entire width is 400x100.  <br>
+        margine, border, padding and container will share the internal space.
     </div>
 </body>
 </html>
