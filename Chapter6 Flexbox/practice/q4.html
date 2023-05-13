@@ -1,0 +1,81 @@
+<!-- 
+    q4: Create the following layout using flexbox.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q4</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .a {
+            flex: 1;
+            margin: 0 0 0 10px;
+            background-image: url(b.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .b {
+            padding: 10px;
+            display: flex;
+            justify-content: end;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            background: #ffb2b2;
+            height: 50vh;
+            align-items: center;
+        }
+
+        .c {
+            margin: 20px;
+            padding: 20px;
+            background-image: url(a.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul class="a"></ul>
+        <ul class="b">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="c">asd</div>
+        <div class="c">asd</div>
+        <div class="c">asd</div>
+    </div>
+</body>
+
+</html>

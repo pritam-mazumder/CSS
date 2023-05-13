@@ -1,0 +1,188 @@
+<!-- 
+    CSS text-decoration Property:
+
+        It specifies the decoration added to text, and is a shorthand property for:
+            text-decoration-line (required)
+            text-decoration-color
+            text-decoration-style
+            text-decoration-thickness
+
+
+        Property Values:
+         - text-decoration-line 	    underline/overline/line-through 	
+         - text-decoration-color 	    color of the text decoration 	
+         - text-decoration-style 	    style of the text decoration (like solid, wavy, dotted, dashed, double) 	
+         - text-decoration-thickness 	thickness of the decoration line
+
+
+    CSS text-transform Property:
+
+        It controls the capitalization of text.
+
+        Property Values:
+         - none 	    No capitalization. The text renders as it is. This is default 	
+         - capitalize 	Transforms the first character of each word to uppercase 	
+         - uppercase 	Transforms all characters to uppercase 	
+         - lowercase 	Transforms all characters to lowercase
+
+
+    CSS line-height Property
+
+        It specifies the height of a line.
+
+        Property Values
+         - normal 	A normal line height. This is default 	
+         - number 	A number that will be multiplied with the current font-size to set the line height 	
+         - length 	A fixed line height in px, pt, cm, etc. 	
+         - % 	    A line height in percent of the current font size
+
+
+    CSS font Property:
+
+        The font property is a shorthand property for:
+            font-style
+            font-variant
+            font-weight
+            font-size/line-height
+            font-family
+
+        Property Values:
+         - font-style 	            Specifies the font style. Default value is "normal" 	
+         - font-variant 	        Specifies the font variant. Default value is "normal" 	
+         - font-weight 	            Specifies the font weight. Default value is "normal" 	
+         - font-size/line-height 	Specifies the font size and the line-height. Default value is "normal" 	
+         - font-family 	            Specifies the font family. Default value depends on the browser 	
+         - caption 	                Uses the font that are used by captioned controls (like buttons, drop-downs, etc.) 	
+         - icon 	                Uses the font that are used by icon labels 	
+         - menu 	                Uses the fonts that are used by dropdown menus 	
+         - message-box 	            Uses the fonts that are used by dialog boxes 	
+         - small-caption 	        A smaller version of the caption font 	
+         - status-bar 	            Uses the fonts that are used by the status bar
+
+
+    CSS font-family Property:
+
+        It specifies the font for an element.
+        It can hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font.
+
+        There are two types of font family names:
+         - family-name      e.g. "times", "courier", "arial", etc.
+         - generic-family   e.g. "serif", "sans-serif", "cursive", "fantasy", "monospace".
+
+
+    Web Safe Fonts:
+
+    The following fonts are the best web safe fonts for HTML and CSS:
+        Arial (sans-serif)
+        Verdana (sans-serif)
+        Tahoma (sans-serif)
+        Trebuchet MS (sans-serif)
+        Times New Roman (serif)
+        Georgia (serif)
+        Garamond (serif)
+        Courier New (monospace)
+        Brush Script MT (cursive)
+
+
+    CSS font-size Property:
+
+        It sets the size of a font.
+
+    
+    CSS font-style Property:
+
+        It sets the style of a font.
+
+
+    CSS font-varient Property:
+
+        In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.
+
+        The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+
+    
+    CSS font-weight Property:
+
+        It sets how thick or thin characters in text should be displayed.
+
+
+    Generic Font Families
+
+    In CSS there are five generic font families:
+
+        Serif fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.
+        Sans-serif fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.
+        Monospace fonts - here all the letters have the same fixed width. They create a mechanical look. 
+        Cursive fonts imitate human handwriting.
+        Fantasy fonts are decorative/playful fonts.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- THIS IS HOW WE CAN USE GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet" />
+  <title>Document</title>
+
+  <style>
+    .h1 {
+      text-decoration: underline;
+    }
+
+    .h2 {
+      text-decoration: underline dotted;
+    }
+
+    .h3 {
+      text-decoration: underline dotted red;
+    }
+
+    .h4 {
+      text-decoration: green wavy underline;
+    }
+
+    .h5 {
+      text-decoration: underline overline #ff3028;
+    }
+
+    p {
+      height: 100px;
+      width: 300px;
+      background-color: rgb(255, 255, 164);
+      text-transform: uppercase;
+      line-height: 2;
+      font: 20px;
+      font-family: cursive;
+    }
+
+    /* THIS IS HOW WE CAN USE GOOGLE FONTS */
+    .gfont {
+      font-family: 'Tilt Prism', cursive;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 class="h1">Lorem ipsum dolor sit amet.</h3>
+  <h3 class="h2">Lorem ipsum dolor sit amet.</h3>
+  <h3 class="h3">Lorem ipsum dolor sit amet.</h3>
+  <h3 class="h4">Lorem ipsum dolor sit amet.</h3>
+  <h3 class="h5">Lorem ipsum dolor sit amet.</h3>
+
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+  <p class="gfont">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione modi ab
+    deleniti ut
+  </p>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!-- 
+    Flexbox 
+
+    The flex box is a layout mode in CSS that offers powerful alignment capabilities to align items within a container. 
+    The main idea behind the flex model, is to give web developers more control over the layout of their pages without having to use floats and positioning.
+
+    Flex direction property
+
+    The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction. 
+    By default, flex items are laid out horizontally, from left to right. 
+    However, by changing this value to column, they can be laid out vertically, from top to bottom.
+
+    The flex container properties are:
+
+     - flex-direction       column              stacks the flex items vertically (from top to bottom)
+                            column-reverse      stacks the flex items vertically (but from bottom to top)
+                            row stacks          stacks the flex items horizontally (from left to right)
+                            row-reverse         stacks the flex items horizontally (but from right to left)
+
+     - flex-wrap            wrap                specifies that the flex items will wrap if necessary
+                            nowrap              specifies that the flex items will not wrap (this is default)
+                            wrap-reverse        specifies that the flexible items will wrap if necessary, in reverse order
+
+     - flex-flow            row wrap            a shorthand property for setting both the flex-direction and flex-wrap properties
+
+     - justify-content      center              aligns the flex items at the center of the container
+                            flex-start          aligns the flex items at the beginning of the container (this is default)
+                            flex-end            aligns the flex items at the end of the container
+                            space-around        displays the flex items with space before, between, and after the lines
+                            space-between       displays the flex items with space between the lines
+                            space-evenly        displays the flex items with space between the lines, distributing the space evenly
+                            
+     - align-items          center              aligns the flex items in the middle of the container
+                            flex-start          aligns the flex items at the top of the container
+                            flex-end            aligns the flex items at the bottom of the container
+                            stretch             stretches the flex items to fill the container (this is default)
+                            baseline            aligns the flex items such as their baselines aligns
+
+     - align-content        space-between       displays the flex lines with equal space between them
+                            space-around        displays the flex lines with space before, between, and after them
+                            stretch             stretches the flex lines to take up the remaining space (this is default)
+                            center              displays the flex lines in the middle of the container
+                            flex-start          displays the flex lines at the start of the container
+                            flex-end            displays the flex lines at the end of the container
+
+     - flex-item            order               sets the order of the flex items
+                            flex-grow           specifies how much a flex item will grow relative to the rest of the flex items
+                            flex-shrink         specifies how much a flex item will shrink relative to the rest of the flex items
+                            flex-basis          sets the initial size of the flex item
+                            flex                a shorthand property for flex-grow, flex-shrink, and flex-basis
+                            align-self          specifies the alignment for the selected item inside the flexible container.
+                                                 - stretch 
+                                                 - center 
+                                                 - start 
+                                                 - end
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            background-color: aquamarine;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap-reverse;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .box1 {
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            border: 2px solid black;
+        }
+
+        .box2 {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border: 2px solid black;
+        }
+
+        .box3 {
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            border: 2px solid black;
+        }
+
+        .box4 {
+            height: 200px;
+            width: 200px;
+            background-color: orange;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+
+</html>

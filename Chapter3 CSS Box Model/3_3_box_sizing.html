@@ -1,0 +1,71 @@
+<!-- 
+    Box Sizing:
+
+    This property allows us to include the padding and border in an element's total width and height.
+
+    By default, the width and height of an element is calculated like this:
+
+    actual width of an element  = width  + padding + border
+    actual height of an element = height + padding + border
+
+
+    Property Values:
+
+        1. content-box 	
+            Default. 
+            If you set an element's width to 100 pixels, then the element's content box will be 100 pixels wide, and the width of any border or padding will be added to the final rendered width, making the element wider than 100px.
+
+                total size = content size + padding + border (size will add-on as per the value)
+                      100% = 100px        + 10px    + 10px
+                      100% < added value
+        
+        2. border-box 	
+            If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. 
+
+                total size = [content size + padding + border]
+                      100% = [100px        + 10px    + 10px  ]
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+
+    <style>
+        .d1 {
+            box-sizing: content-box;
+            width: 400px;
+            height: 100px;
+            padding: 30px;
+            border: 10px solid green;
+        }
+
+        .d2 {
+            box-sizing: border-box;
+            width: 400px;
+            height: 100px;
+            padding: 30px;
+            border: 10px solid green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="d1">
+        This div has a width of 300x100 <br>
+        Full width = 400 + (30+30) + (10+10) + (0+0) = 380px <br>
+        Full height = 100 + (30+30) + (10+10) + (0+0) = 180px
+    </div>
+    <br>
+    <div class="d2">
+        Entire width is 400x100. <br>
+        margine, border, padding and container will share the internal space.
+    </div>
+</body>
+
+</html>

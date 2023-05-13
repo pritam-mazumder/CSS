@@ -1,0 +1,28 @@
+/* color */
+.red {
+  background-color: red;
+  color: white;
+}
+.green {
+  background-color: green;
+  color: aqua;
+}
+
+/* background */
+.d1 {
+  width: 340px;
+  height: 1500px;
+  margin: auto;
+  text-align: center;
+  color: green;
+  border: 2px solid red;
+  /* background-color: rgb(14, 68, 33); */
+  background-image: url(./img.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-attachment: fixed;
+  /* background-shorthand ==> background: url(./img.png) no-repeat scroll top center; */
+}
+.b {
+}

@@ -1,0 +1,57 @@
+<!-- 
+    q3: Demonstrate the use of z-index using an example.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            padding: 25px;
+            background-color: black;
+            color: white;
+        }
+
+        li {
+            display: inline-block;
+            font-size: 2vw;
+        }
+
+        div {
+            height: 120vh;
+            background-color: cornsilk;
+            position: relative;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, et dolorum necessitatibus fugiat labore odit
+        deleniti a esse doloremque, eum voluptas nesciunt earum aliquam, fuga iusto illum sequi quo molestiae.
+    </div>
+</body>
+
+</html>
