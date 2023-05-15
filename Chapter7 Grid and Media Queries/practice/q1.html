@@ -1,0 +1,65 @@
+<!-- 
+    q1: Create a header with content using css grid.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ul {
+            display: grid;
+            grid-template-columns: auto auto auto 700px;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+        } */
+
+        ul {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        li {
+            list-style: none;
+            margin: 0 23px;
+            padding: 22px 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quae fuga soluta velit animi sint voluptatem
+        impedit autem? Pariatur iste omnis quasi, dolorem sint ipsum mollitia suscipit veniam id libero.
+    </div>
+</body>
+
+</html>

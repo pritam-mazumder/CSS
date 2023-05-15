@@ -1,5 +1,5 @@
 <!-- 
-    q4: Create the following layout using flexbox.
+    q1: Create a layout created which is green in chapter 6 practice set using css grid.
  -->
 
 <!DOCTYPE html>
@@ -9,31 +9,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>q4</title>
+    <title>q2</title>
     <style>
         * {
             margin: 0;
+            padding: 0;
         }
 
-        header {
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .a {
-            flex: 1;
-            margin: 0 0 0 10px;
-            background-image: url(b.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        .b {
-            padding: 10px;
-            display: flex;
-            justify-content: end;
+        ul {
+            display: grid;
+            grid-template-columns: 1600px auto auto auto;
+            background-color: #000000;
+            color: #ffffff;
         }
 
         li {
@@ -41,12 +28,17 @@
             padding: 10px;
         }
 
+        li img {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 20px;
+        }
+
         .container {
-            display: flex;
+            padding: 10vh;
+            display: grid;
+            grid-template-columns: auto auto auto;
             justify-content: space-evenly;
-            background: #ffb2b2;
-            height: 50vh;
-            align-items: center;
             background-image: url(c.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -55,7 +47,7 @@
         .c {
             margin: 20px;
             padding: 20px;
-            background-image: url(a.png);
+            background-image: url(b.png);
             background-size: contain;
             background-repeat: no-repeat;
             height: 200px;
@@ -66,8 +58,8 @@
 
 <body>
     <header>
-        <ul class="a"></ul>
         <ul class="b">
+            <li><img src="a.png" alt=""></li>
             <li>Home</li>
             <li>About</li>
             <li>Contact</li>

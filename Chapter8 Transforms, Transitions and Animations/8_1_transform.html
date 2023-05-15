@@ -1,0 +1,88 @@
+<!-- 
+    Transform
+
+    The transform CSS property lets you rotate, scale, skew, or translate an element. 
+    It modifies the coordinate space of the CSS visual formatting model. 
+
+     - matrix(n,n,n,n,n,n) 	    Defines a 2D transformation, using a matrix of six values 	
+     - 
+     - translate(x,y) 	        Defines a 2D translation 	
+     - translate3d(x,y,z) 	    Defines a 3D translation 	
+     - translateX(x) 	        Defines a translation, using only the value for the X-axis 	
+     - translateY(y) 	        Defines a translation, using only the value for the Y-axis 	
+     - translateZ(z) 	        Defines a 3D translation, using only the value for the Z-axis 	
+     - 
+     - scale(x,y) 	            Defines a 2D scale transformation 	
+     - scale3d(x,y,z) 	        Defines a 3D scale transformation 	
+     - scaleX(x) 	            Defines a scale transformation by giving a value for the X-axis 	
+     - scaleY(y) 	            Defines a scale transformation by giving a value for the Y-axis 	
+     - scaleZ(z) 	            Defines a 3D scale transformation by giving a value for the Z-axis 	
+     - 
+     - rotate(angle) 	        Defines a 2D rotation, the angle is specified in the parameter 	
+     - rotate3d(x,y,z,angle) 	Defines a 3D rotation 	
+     - rotateX(angle) 	        Defines a 3D rotation along the X-axis 	
+     - rotateY(angle) 	        Defines a 3D rotation along the Y-axis 	
+     - rotateZ(angle) 	        Defines a 3D rotation along the Z-axis 	
+ - 
+     - skew(x-angle,y-angle) 	Defines a 2D skew transformation along the X- and the Y-axis 	
+     - skewX(angle) 	        Defines a 2D skew transformation along the X-axis 	
+     - skewY(angle) 	        Defines a 2D skew transformation along the Y-axis 	
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .container {
+            background-color: red;
+            height: 146px;
+        }
+
+        .box {
+            border: 2px solid black;
+            display: inline-block;
+            /* transform: translate(134px, 56px) rotateX(45deg);
+            transform-origin: 0;
+            transform: translate(34px); */
+        }
+
+        /* img:hover {
+            width: 56px;
+        } */
+        img {
+            width: 146px;
+            transition-property: width;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img id="myImg" src="https://source.unsplash.com/960x520/?nature,water" alt="">
+            <button id="btn">Toggle</button>
+        </div>
+    </div>
+</body>
+<script>
+    myImg.style.width = "146px";
+    btn.addEventListener("click", () => {
+        if (myImg.style.width === '546px') {
+            myImg.style.width = "146px";
+        }
+        else if (myImg.style.width === '146px') {
+            myImg.style.width = "546px";
+        }
+    })
+</script>
+
+</html>

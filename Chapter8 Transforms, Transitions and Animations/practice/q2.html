@@ -1,0 +1,89 @@
+<!-- 
+    q2: Create a rotating image using css.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            animation: load 2s ease-in-out 0s infinite forwards;
+        }
+
+        @keyframes load {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        header {
+            background-color: black;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            padding: 15px;
+        }
+
+        main {
+            height: 100vh;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            animation: spin 2s linear infinite forwards;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar"></div>
+    <header>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </header>
+    <main>
+        <img src="a.png">
+    </main>
+</body>
+
+</html>

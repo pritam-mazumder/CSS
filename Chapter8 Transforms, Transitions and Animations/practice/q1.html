@@ -1,0 +1,69 @@
+<!-- 
+    q1: Create a thin progress bar for a website.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            animation: load 2s ease-in-out 0s infinite forwards;
+        }
+
+        @keyframes load {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        header {
+            background-color: black;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            padding: 15px;
+        }
+
+        main {
+            height: 100vh;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar"></div>
+    <header>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </header>
+    <main></main>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!-- 
+    Animations 
+    
+    Animations make it possible to animate transitions from one CSS style configuration to another.
+    It consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style.
+
+     - animation-name 	            Specifies the name of the @keyframes animation
+     - animation-duration 	        Specifies how long time an animation should take to complete one cycle
+     - animation-timing-function 	Specifies the speed curve of the animation
+     - animation-delay 	            Specifies a delay for the start of an animation
+     - animation-iteration-count 	Specifies the number of times an animation should be played
+     - animation-direction 	        Specifies whether an animation should be played forwards, backwards or in alternate cycles
+     - animation                 	A shorthand property for setting all the animation properties
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: cyan;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* animation-name: widthAnimaiton;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse; */
+
+            animation: widthAnimaiton 1s ease-in-out 1s infinite alternate-reverse;
+        }
+
+        img {
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            animation: widthAnimaiton 1s ease-in-out 1s infinite alternate-reverse;
+        }
+
+        .a {
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            animation: widthAnimaiton2 1s ease-in-out 1s infinite alternate-reverse;
+        }
+
+        @keyframes widthAnimaiton {
+            from {
+                width: 300px;
+                height: 300px;
+            }
+
+            to {
+                width: 100vw;
+            }
+        }
+
+        @keyframes widthAnimaiton2 {
+            0% {
+                width: 300px;
+            }
+
+            50% {
+                width: 80vw;
+            }
+
+            100% {
+                width: 100vw;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <img src="a.png">
+        <img class="a" src="b.png">
+    </div>
+</body>
+
+</html>

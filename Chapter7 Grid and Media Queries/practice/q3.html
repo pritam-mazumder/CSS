@@ -1,0 +1,44 @@
+<!-- 
+    q3: Create a webpage which is green on large screen device,
+        red on meduim & yellow on small devices.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: green;
+        }
+        @media (max-width: 1400px) {
+            body{
+                background-color: red;
+            }
+        }
+        @media (max-width: 600px) {
+            body{
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est eveniet iusto inventore maiores, explicabo
+        minus nostrum tenetur blanditiis tempore vel ex et nihil veniam excepturi voluptatem incidunt assumenda
+        deleniti!
+    </div>
+</body>
+
+</html>

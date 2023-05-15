@@ -1,0 +1,71 @@
+<!-- 
+    Transitions
+
+    Transitions allows you to change property values smoothly, over a given duration.
+
+     - transition 	                A shorthand property for setting the four transition properties into a single property
+     - transition-delay 	        Specifies a delay (in seconds) for the transition effect
+     - transition-duration 	        Specifies how many seconds or milliseconds a transition effect takes to complete
+     - transition-property 	        Specifies the name of the CSS property the transition effect is for
+     - transition-timing-function 	Specifies the speed curve of the transition effect
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .container {
+            background-color: red;
+            height: 146px;
+        }
+
+        .box {
+            border: 2px solid black;
+            display: inline-block;
+
+        }
+
+        img {
+            width: 146px;
+            height: 455px;
+            /* transition-property: width;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s; */
+
+            transition: width 0.2s ease-in-out, height 1s ease-in;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img id="myImg" src="https://source.unsplash.com/960x520/?nature,water" alt="">
+            <button id="btn">Toggle</button>
+        </div>
+    </div>
+</body>
+<script>
+    myImg.style.width = "146px";
+    myImg.style.height = "16px";
+
+    btn.addEventListener("click", () => {
+        myImg.style.height = "456px";
+        if (myImg.style.width === '546px') {
+            myImg.style.width = "146px";
+        }
+        else if (myImg.style.width === '146px') {
+            myImg.style.width = "546px";
+        }
+    })
+</script>
+
+</html>
